@@ -256,7 +256,7 @@ group.add(fireFly)
 // FOR FLOAT Buffer geometry
 
 const geometry =new THREE.BufferGeometry()
-const count = 120
+const count = 100
 const positionArray =new Float32Array(count*3*3)
 const colors =new Float32Array(count*3*3)
 
@@ -270,7 +270,7 @@ geometry.setAttribute('position', positionAttributes)
 const colorsAttributes = new THREE.BufferAttribute(colors,3)
 geometry.setAttribute('color', colorsAttributes)
 const material1 = new THREE.PointsMaterial( { color: 'yellow' })
-material1.size = 0.2
+material1.size = 0.15
 material1.transparent =true
 material1.alphaMap =particalTexture
 material1.vertexColors = true //for random color
@@ -408,7 +408,7 @@ const loop = () =>
 
     group.rotation.y =0.05 *  elapsedTime 
     group.rotation.x =0.05 *  elapsedTime 
-    fireFly.rotation.z =0.1 *  elapsedTime 
+    fireFly.rotation.z =0.05 *  elapsedTime 
 
     camera.lookAt(head)
     // update controls
